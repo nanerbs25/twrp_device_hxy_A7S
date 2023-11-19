@@ -39,11 +39,6 @@
 /metadata         ext4     /dev/block/platform/bootdevice/by-name/md_udc                   flags=backup=1;display="Metadata";
 /teksunhw         emmc     /dev/block/platform/bootdevice/by-name/teksunhw                 flags=display="teksunhw";backup=1;flashimg=1
 
-# Flashable logical partitions
-/system_image     emmc     system                                                          flags=backup=1;display="System Image";flashimg=1
-/vendor_image     emmc     vendor                                                          flags=backup=1;display="Vendor Image";flashimg=1
-/product_image    emmc     product                                                         flags=backup=1;display="Product Image";flashimg=1
-
 # Removable storage
 /external_sd      auto     /dev/block/mmcblk1p1            /dev/block/mmcblk1              flags=display="External SDcard";storage;wipeingui;removable;backup=0
 /usbotg           auto     /dev/block/sda1                 /dev/block/sda                  flags=display="Usb-Otg";storage;removable;backup=0
