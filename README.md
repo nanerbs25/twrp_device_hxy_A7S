@@ -25,6 +25,16 @@ It was released in September, 2020.
 | Front camera            | 8 MP, f/1.8                                                 |
 | Sensors                 | Accelerometer, Gyro, Proximity, Compass                     |
 
+## What's Working?
+ • Touch
+ • MTP
+ • ADB
+
+## What's not Working?
+ • Cant mount System
+ • Flashlight
+ • Decryption 
+
 ## Device picture
 
 ![UMIDIGI_A7S](https://fdn.gsmarena.com/imgroot/news/20/09/umidigi-a7s-official/-900x900/gsmarena_003.jpg)
