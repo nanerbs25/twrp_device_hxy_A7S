@@ -1,4 +1,4 @@
-ro.secure=0
+aro.secure=0
 ro.adb.secure=0
 ro.debuggable=1
 ro.sf.lcd_density=320
@@ -9,3 +9,6 @@ ro.treble.enabled=true
 ro.mediatek.platform=MT6737M
 ro.hardware=mt6735
 ro.boot.dynamic_partitions=true
+# Crypto
+ro.crypto.volume.filenames_mode=aes-256-cts
+

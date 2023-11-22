@@ -85,7 +85,10 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_SUPER_PARTITION_SIZE := 3261071360
 BOARD_SUPER_PARTITION_GROUPS := main
 BOARD_MAIN_SIZE := 3261071360
-BOARD_MAIN_LIST := product system vendor
+BOARD_MAIN_PARTITION_LIST := \
+        system \
+        vendor \
+        product
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -111,13 +114,16 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 
 # TWRP specific build flags
+TARGET_SCREEN_DENSITY := 320
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
 TW_THEME := portrait_hdpi
 #TW_Y_OFFSET := 54
 #TW_H_OFFSET := -54
-BOARD_BATTERY_FIXED_VOLTAGE := 3800
+#BOARD_BATTERY_FIXED_VOLTAGE := 3800
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+TW_CUSTOM_BATTERY_PATH := "/sys/class/power_supply/battery"
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
@@ -129,6 +135,9 @@ TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_SUPERSU := true
 TW_EXCLUDE_TZDATA := true
 TW_INCLUDE_FB2PNG := true
+TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/bootdevice/by-name/userdata"
+TW_CRYPTO_MNT_POINT := "/data"
+TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,barrier=0,data=ordered"
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
