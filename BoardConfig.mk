@@ -86,9 +86,9 @@ BOARD_SUPER_PARTITION_SIZE := 3261071360
 BOARD_SUPER_PARTITION_GROUPS := main
 BOARD_MAIN_SIZE := 3261071360
 BOARD_MAIN_PARTITION_LIST := \
+        product \
         system \
-        vendor \
-        product
+        vendor
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -117,12 +117,10 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_SCREEN_DENSITY := 320
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
-#OF_FL_PATH1 := "/sys/class/flashlight_core/flashlight"
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
 TW_THEME := portrait_hdpi
 #TW_Y_OFFSET := 54
 #TW_H_OFFSET := -54
-#BOARD_BATTERY_FIXED_VOLTAGE := 3800
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_CUSTOM_BATTERY_PATH := "/sys/class/power_supply/battery"
 RECOVERY_SDCARD_ON_DATA := true
@@ -142,6 +140,7 @@ TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,barrier=0,
 DEVICE_SCREEN_WIDTH := 720
 DEVICE_SCREEN_HEIGHT := 1600
 TW_INCLUDE_SETPROP := true
+
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
