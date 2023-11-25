@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 
+
 DEVICE_PATH := device/hxy/A7S
 
 # For building with minimal manifest
