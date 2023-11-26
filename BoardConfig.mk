@@ -135,6 +135,7 @@ TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_SUPERSU := true
 TW_EXCLUDE_TZDATA := true
 TW_INCLUDE_FB2PNG := true
+TW_EXCLUDE_NANO := true
 TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/bootdevice/by-name/userdata"
 TW_CRYPTO_MNT_POINT := "/data"
 TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,barrier=0,data=ordered"
@@ -153,3 +154,29 @@ TARGET_USES_LOGD := true
 # PBRP specific build flags
 PB_DISABLE_DEFAULT_DM_VERITY := true
 PB_ENGLISH := true
+
+# SHRP Build Flags
+SHRP_PATH := device/hxy/A7S
+SHRP_MAINTAINER := nanerbs25
+SHRP_DEVICE_CODE := A7S
+SHRP_HAS_RECOVERY_PARTITION := true
+SHRP_EDL_MODE := 0
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usbotg
+SHRP_REC := /dev/block/platform/bootdevice/by-name/recovery
+SHRP_REC_TYPE := Treble
+SHRP_DEVICE_TYPE := A-Only
+SHRP_FLASH := true
+SHRP_OFFICIAL := false
+SHRP_DARK := true
+#SHRP_ALT_REBOOT := true
+SHRP_NOTCH := true
+SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
+SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
+SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
+#SHRP_FLASH_MAX_BRIGHTNESS := 200
+#SHRP_STATUSBAR_RIGHT_PADDING := 20
+#SHRP_STATUSBAR_LEFT_PADDING := 20
+#SHRP_AB := true
+SHRP_CUSTOM_FLASHLIGHT := true
