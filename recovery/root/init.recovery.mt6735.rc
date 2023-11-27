@@ -1,5 +1,15 @@
 import /init.recovery.${ro.hardware}.usb.rc
 
+service flashlightd /bin/hw/flashlightd
+    user root
+    group root
+    seclabel u:r:init:s0
+    oneshot  # not confident enough to have it auto restart
+    disabled
+
+on post-fs
+    start flashlightd
+
 on post-fs-data
 
 # create symbolic link for msdc0 and msdc1 under/dev/block/platform/

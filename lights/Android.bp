@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: GLWTPL
+
+cc_binary {
+    name: "flashlightd",
+    relative_install_path: "hw",
+    srcs: [
+        "main.cpp",
+        "ipc.cpp",
+        "util.cpp",
+        "flashlight.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+    ],
+    recovery: true,
+}

@@ -154,6 +154,7 @@ TARGET_USES_LOGD := true
 # PBRP specific build flags
 PB_DISABLE_DEFAULT_DM_VERITY := true
 PB_ENGLISH := true
+PB_TORCH_PATH := /tmp/.torch_trigger
 
 # SHRP Build Flags
 SHRP_PATH := device/hxy/A7S
@@ -167,15 +168,13 @@ SHRP_OTG := /usbotg
 SHRP_REC := /dev/block/platform/bootdevice/by-name/recovery
 SHRP_REC_TYPE := Treble
 SHRP_DEVICE_TYPE := A-Only
-SHRP_FLASH := true
+SHRP_FLASH := 1
 SHRP_OFFICIAL := false
 SHRP_DARK := true
 #SHRP_ALT_REBOOT := true
 SHRP_NOTCH := true
-SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
-SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
-SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
-#SHRP_FLASH_MAX_BRIGHTNESS := 200
+SHRP_FONP_1 := /tmp/.torch_trigger
+SHRP_FLASH_MAX_BRIGHTNESS := 255
 #SHRP_STATUSBAR_RIGHT_PADDING := 20
 #SHRP_STATUSBAR_LEFT_PADDING := 20
 #SHRP_AB := true
