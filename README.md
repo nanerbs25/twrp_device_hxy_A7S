@@ -25,15 +25,13 @@ It was released in September, 2020.
 | Front camera            | 8 MP, f/1.8                                                 |
 | Sensors                 | Accelerometer, Gyro, Proximity, Compass                     |
 
-## What's Working?
- • Touch
- • MTP
- • ADB
-
-## What's not Working?
- • Cant mount System
- • Flashlight
- • Decryption 
+| What's Working?                      | What's not Working?        |
+| ------------------------------------:|:---------------------------|
+| • Touch                              | • Flashlight (fixing)      |
+| • MTP                                | • Decryption               |
+| • ADB                                |                            |
+| • Mount System, Product, and Vendor  |                            |
+| • Flashing a zip                     |                            |
 
 ## Device picture
 
