@@ -27,9 +27,10 @@ It was released in September, 2020.
 
 | What's Working?                      | What's not Working?        |
 | ------------------------------------:|:---------------------------|
-| • Touch                              | • Flashlight (fixing)      |
-| • MTP                                | • Decryption               |
+| • Touch                              | • Decryption               |
+| • MTP                                |                            |
 | • ADB                                |                            |
+| • Flashlight                         |                            |
 | • Mount System, Product, and Vendor  |                            |
 | • Flashing a zip                     |                            |
 
