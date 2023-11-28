@@ -1,5 +1,3 @@
-import /init.recovery.${ro.hardware}.usb.rc
-
 service flashlightd /bin/hw/flashlightd
     user root
     group root
