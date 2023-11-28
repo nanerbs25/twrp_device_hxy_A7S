@@ -1,0 +1,9 @@
+service myshittylog /bin/myshittylog.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:init:s0
+
+on post-fs
+    start myshittylog

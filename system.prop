@@ -12,3 +12,6 @@ ro.boot.dynamic_partitions=true
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 
+# Debug
+ro.logd.filter=disable
+persist.logd.filter=disable

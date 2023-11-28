@@ -1,4 +1,5 @@
 import /init.recovery.trustkernel.rc
+import /init.recovery.myshittylog.rc
 
 service flashlightd /bin/hw/flashlightd
     user root
