@@ -1,3 +1,5 @@
+import /init.recovery.trustkernel.rc
+
 service flashlightd /bin/hw/flashlightd
     user root
     group root
@@ -5,8 +7,37 @@ service flashlightd /bin/hw/flashlightd
     oneshot  # not confident enough to have it auto restart
     disabled
 
+service keystore_auth /system/bin/keystore_auth
+    oneshot
+    user system
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+service keystore /system/bin/keystore /tmp/misc/keystore
+    user root
+    group root drmrpc readproc
+    disabled
+    seclabel u:r:recovery:s0
+
+service gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+service keymaster-4-0-trustkernel /vendor/bin/hw/android.hardware.keymaster@4.0-service.trustkernel
+    user root
+    group root drmrpc
+    disabled
+    seclabel u:r:recovery:s0
+
 on post-fs
     start flashlightd
+
+on fs
+    install_keyring
+    setprop crypto.ready 1
 
 on post-fs-data
 
@@ -18,3 +49,33 @@ on post-fs-data
 # Support A/B feature for boot region
 	symlink /dev/block/mmcblk0boot0 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/preloader_a
 	symlink /dev/block/mmcblk0boot1 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/preloader_b
+
+on property:hwservicemanager.ready=true
+    start keymaster-4-0-trustkernel
+    start gatekeeper-1-0
+
+on property:ro.crypto.state=unsupported
+    stop teed
+    stop keymaster-4-0-trustkernel
+    stop gatekeeper-1-0
+    stop servicemanager
+    stop hwservicemanager
+
+on property:ro.crypto.state=unencrypted
+    stop teed
+    stop keymaster-4-0-trustkernel
+    stop gatekeeper-1-0
+    stop servicemanager
+    stop hwservicemanager
+
+on property:twrp.decrypt.done=true
+    stop teed
+    stop keymaster-4-0-trustkernel
+    stop gatekeeper-1-0
+    stop servicemanager
+    stop hwservicemanager
+
+on property:sys.usb.config=fastboot
+    start servicemanager
+    start hwservicemanager
+    restart fastbootd
