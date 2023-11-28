@@ -116,9 +116,6 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 
 # TWRP specific build flags
 TARGET_SCREEN_DENSITY := 320
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := true
 TW_THEME := portrait_hdpi
 #TW_Y_OFFSET := 54
 #TW_H_OFFSET := -54
@@ -136,9 +133,6 @@ TW_EXCLUDE_SUPERSU := true
 TW_EXCLUDE_TZDATA := true
 TW_INCLUDE_FB2PNG := true
 TW_EXCLUDE_NANO := true
-TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/bootdevice/by-name/userdata"
-TW_CRYPTO_MNT_POINT := "/data"
-TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,barrier=0,data=ordered"
 DEVICE_SCREEN_WIDTH := 720
 DEVICE_SCREEN_HEIGHT := 1600
 TW_INCLUDE_SETPROP := true
@@ -171,11 +165,9 @@ SHRP_DEVICE_TYPE := A-Only
 SHRP_FLASH := 1
 SHRP_OFFICIAL := false
 SHRP_DARK := true
-#SHRP_ALT_REBOOT := true
 SHRP_NOTCH := true
 SHRP_FONP_1 := /tmp/.torch_trigger
 SHRP_FLASH_MAX_BRIGHTNESS := 255
 #SHRP_STATUSBAR_RIGHT_PADDING := 20
 #SHRP_STATUSBAR_LEFT_PADDING := 20
-#SHRP_AB := true
 SHRP_CUSTOM_FLASHLIGHT := true
