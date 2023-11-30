@@ -28,10 +28,10 @@ It was released in September, 2020.
 | What's Working?                      | What's not Working?        |
 | ------------------------------------:|:---------------------------|
 | • Touch                              | • Decryption               |
-| • MTP                                |                            |
+| • MTP                                | • Unable to mount System   |
 | • ADB                                |                            |
 | • Flashlight                         |                            |
-| • Mount System, Product, and Vendor  |                            |
+| • Mount Product, and Vendor          |                            |
 | • Flashing a zip                     |                            |
 
 ## Device picture
