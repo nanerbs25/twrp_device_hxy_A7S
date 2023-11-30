@@ -27,13 +27,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(DEVICE_PATH)/recovery/root,recovery/root)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := A7S
-PRODUCT_NAME := omni_A7S
+PRODUCT_NAME := twrp_A7S
 PRODUCT_BRAND := UMIDIGI
 PRODUCT_MODEL := A7S
 PRODUCT_MANUFACTURER := hxy

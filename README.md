@@ -42,7 +42,7 @@ It was released in September, 2020.
 
 ```shell
 . build/envsetup.sh
-lunch omni_A7S
+lunch twrp_A7S
 mka recoveryimage -j $(($(nproc) + 1))
 ```
 
