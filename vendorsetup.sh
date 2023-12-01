@@ -6,3 +6,5 @@ if [ -d vendor/pb ]; then
 	rm -fv {DroidSansFallback,NotoSansCJKjp-Regular,RoboNoto-Medium}.ttf
 	popd
 fi
+
+export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
