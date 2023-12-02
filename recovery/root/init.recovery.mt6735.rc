@@ -1,5 +1,30 @@
 import /init.recovery.trustkernel.rc
 import /init.recovery.myshittylog.rc
+import /vendor/etc/init/trustkernel.rc
+import /vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
+import /vendor/etc/init/android.hardware.keymaster@4.0-service.trustkernel.rc
+import /vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
+
+
+service hwservicemanager /system/bin/hwservicemanager
+    user root
+    group root readproc
+    disabled
+    onrestart setprop hwservicemanager.ready false
+    seclabel u:r:recovery:s0
+
+service servicemanager /system/bin/servicemanager
+    user root
+    group root readproc
+    disabled
+    seclabel u:r:recovery:s0
+
+service myshittylog /system/bin/myshittylog.sh
+    user root
+    group root
+    seclabel u:r:init:s0
+    oneshot  # not confident enough to have it auto restart
+    disabled
 
 service flashlightd /bin/hw/flashlightd
     user root
@@ -35,7 +60,7 @@ service keymaster-4-0-trustkernel /vendor/bin/hw/android.hardware.keymaster@4.0-
 
 on post-fs
     start flashlightd
-
+    start myshittylog
 on fs
     install_keyring
     setprop crypto.ready 1

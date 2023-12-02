@@ -21,3 +21,4 @@ export OF_ALLOW_DISABLE_NAVBAR=0
 export FOX_DELETE_AROMAFM=1
 export FOX_BUILD_TYPE="Beta"
 export FOX_REMOVE_BASH=1
+export FOX_RECOVERY_INSTALL_PARTITION=/dev/block/platform/bootdevice/by-name/recovery

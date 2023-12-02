@@ -200,4 +200,4 @@ SHRP_FLASH_MAX_BRIGHTNESS := 255
 SHRP_CUSTOM_FLASHLIGHT := true
 
 #OFRP Build Flags
-OF_FL_PATH1 := /tmp/brightness
+OF_FL_PATH1 := /tmp
