@@ -200,4 +200,4 @@ SHRP_FLASH_MAX_BRIGHTNESS := 255
 SHRP_CUSTOM_FLASHLIGHT := true
 
 #OFRP VARS
-OF_FL_PATH1 := /tmp/.torch_trigger
+#OF_FL_PATH1 := "/tmp/.torch_trigger"
