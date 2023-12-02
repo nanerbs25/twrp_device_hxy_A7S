@@ -114,7 +114,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 
 # TWRP specific build flags
-TARGET_SCREEN_DENSITY := 320
+TARGET_SCREEN_DENSITY := 240
 TW_THEME := portrait_hdpi
 #TW_Y_OFFSET := 54
 #TW_H_OFFSET := -54
@@ -177,7 +177,7 @@ TARGET_USES_LOGD := true
 # PBRP specific build flags
 PB_DISABLE_DEFAULT_DM_VERITY := true
 PB_ENGLISH := true
-PB_TORCH_PATH := /tmp/.torch_trigger
+PB_TORCH_PATH := /tmp/brightness
 
 # SHRP Build Flags
 SHRP_PATH := device/hxy/A7S
@@ -195,9 +195,9 @@ SHRP_FLASH := 1
 SHRP_OFFICIAL := false
 SHRP_DARK := true
 SHRP_NOTCH := true
-SHRP_FONP_1 := /tmp/.torch_trigger
+SHRP_FONP_1 := /tmp/brightness
 SHRP_FLASH_MAX_BRIGHTNESS := 255
 SHRP_CUSTOM_FLASHLIGHT := true
 
 #OFRP Build Flags
-OF_FL_PATH1 := /tmp/.torch_trigger
+OF_FL_PATH1 := /tmp/brightness

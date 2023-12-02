@@ -20,7 +20,7 @@
 #include "util.h"
 #include "flashlight.h"
 
-#define TRIGGER_PATH        "/tmp/.torch_trigger"
+#define TRIGGER_PATH        "/tmp/brightness"
 
 static int sigfd = -1;
 static int inotify_fd = -1;
