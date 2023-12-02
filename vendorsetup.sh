@@ -12,7 +12,7 @@ fi
 export OF_MAINTAINER=nanerbs25
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 export OF_SCREEN_H=2400
-export OF_FL_PATH1=/tmp/.torch_trigger
+export OF_FL_PATH1=/tmp
 export OF_STATUS_H=80
 export OF_STATUS_INDENT_LEFT=48
 export OF_STATUS_INDENT_RIGHT=48
