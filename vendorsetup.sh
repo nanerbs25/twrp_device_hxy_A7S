@@ -20,4 +20,4 @@ export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 export OF_SCREEN_H=2160
-export OF_FL_PATH1 := /tmp/.torch_trigger
+export OF_FL_PATH1=/tmp/.torch_trigger
