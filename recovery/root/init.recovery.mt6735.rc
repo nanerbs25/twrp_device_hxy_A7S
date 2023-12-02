@@ -46,24 +46,27 @@ service keystore /system/bin/keystore /tmp/misc/keystore
     disabled
     seclabel u:r:recovery:s0
 
-service gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
-    user root
-    group root
-    disabled
-    seclabel u:r:recovery:s0
+#service gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
+#    user root
+#    group root
+#    disabled
+#    seclabel u:r:recovery:s0
 
-service keymaster-4-0-trustkernel /vendor/bin/hw/android.hardware.keymaster@4.0-service.trustkernel
-    user root
-    group root drmrpc
-    disabled
-    seclabel u:r:recovery:s0
+#service keymaster-4-0-trustkernel /vendor/bin/hw/android.hardware.keymaster@4.0-service.trustkernel
+#    user root
+#    group root drmrpc
+#    disabled
+#    seclabel u:r:recovery:s0
 
 on post-fs
     start flashlightd
     start myshittylog
+
 on fs
     install_keyring
     setprop crypto.ready 1
+    start hwservicemanager
+    start servicemanager
 
 on post-fs-data
 
