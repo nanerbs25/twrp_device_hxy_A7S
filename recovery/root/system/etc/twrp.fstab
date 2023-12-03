@@ -25,8 +25,8 @@
 /proinfo          emmc     /dev/block/platform/bootdevice/by-name/proinfo                  flags=display="proinfo";backup=1
 /protect_f        emmc     /dev/block/platform/bootdevice/by-name/protect1                 flags=backup=1
 /protect_s        emmc     /dev/block/platform/bootdevice/by-name/protect2                 flags=backup=1
-/tee1             emmc     /dev/block/platform/bootdevice/by-name/tee1                     flags=display="trustzone1";backup=1
-/tee2             emmc     /dev/block/platform/bootdevice/by-name/tee2                     flags=display="trustzone2";backup=1
+/tee1             emmc     /dev/block/platform/bootdevice/by-name/tee1                     flags=display="Tee";backup=1;flashimg=1
+/tee2             emmc     /dev/block/platform/bootdevice/by-name/tee2                     flags=backup=1;subpartitionof=/tee1
 /vbmeta_system    emmc     /dev/block/platform/bootdevice/by-name/vbmeta_system            flags=display="Vbmeta System";backup=1:flashimg=1
 /vbmeta_vendor    emmc     /dev/block/platform/bootdevice/by-name/vbmeta_vendor            flags=display="Vbmeta Vendor";backup=1:flashimg=1
 /seccfg           emmc     /dev/block/platform/bootdevice/by-name/seccfg

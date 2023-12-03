@@ -53,15 +53,20 @@ service teed /vendor/bin/teed \
     --sptapath /data/vendor/t6/app \
     --systapath /vendor/app/t6 \
     --prot /mnt/vendor/persist/t6 \
+    --prot /mnt/vendor/persist/t6_twrp \
+    --prot /mnt/vendor/protect_f/tee_twrp \
     --logpath /data/vendor/t6/tkcore.log \
     --proprefix vendor.trustkernel
-	user system
-	group system
-	class core
+    capabilities SYS_RAWIO
+	user root
+	group root
+    disabled
+    seclabel u:r:recovery:s0
 
 service tee_check_keybox /vendor/bin/tee_check_keybox
-	user system
-	group system
+	user root
+	group root
 	class main
 	disabled
+	seclabel u:r:recovery:s0
 	oneshot
