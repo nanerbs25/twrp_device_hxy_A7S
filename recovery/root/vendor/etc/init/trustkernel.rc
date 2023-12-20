@@ -55,6 +55,7 @@ service teed /vendor/bin/teed \
     --prot /mnt/vendor/persist/t6 \
     --prot /mnt/vendor/persist/t6_twrp \
     --prot /mnt/vendor/protect_f/tee_twrp \
+    --sdrpmbdev /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/sdrpmb \
     --logpath /data/vendor/t6/tkcore.log \
     --proprefix vendor.trustkernel
     capabilities SYS_RAWIO
